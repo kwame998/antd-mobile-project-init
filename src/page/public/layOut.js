@@ -16,22 +16,22 @@ class LayOut extends Component {
         }
         if (left && right) {
             return (
-                <NavBar iconName={iconName} style={{backgroundColor: color}} onLeftClick={leftClick}
-                        rightContent={<Icon type="bars"/>}>{title}</NavBar>
+                <NavBar className="app_bar" iconName={iconName} style={{backgroundColor: color}} onLeftClick={leftClick}
+                        rightContent={<Icon type='bars'/>}>{title}</NavBar>
             )
         } else if (left && !right) {
             return (
-                <NavBar iconName={iconName} style={{backgroundColor: color}} onLeftClick={leftClick}
+                <NavBar className="app_bar" iconName={iconName} style={{backgroundColor: color}} onLeftClick={leftClick}
                 >{title}</NavBar>
             )
         } else if (!left && right) {
             return (
-                <NavBar iconName={iconName} style={{backgroundColor: color}}
-                        rightContent={<Icon type="bars"/>}>{title}</NavBar>
+                <NavBar className="app_bar" iconName={iconName} style={{backgroundColor: color}}
+                        rightContent={<Icon type='bars'/>}>{title}</NavBar>
             )
         } else {
             return (
-                <NavBar iconName={""} style={{backgroundColor: color}}>{title}</NavBar>
+                <NavBar className="app_bar" iconName={""} style={{backgroundColor: color}}>{title}</NavBar>
             )
         }
     };
@@ -39,10 +39,11 @@ class LayOut extends Component {
         return (
             <div>
                 {this.renderNavBar()}
-                <button onClick={()=> {
+               {/* <button onClick={()=> {
                     this.props.dispatch(setFootBarVisible(!this.props.footBar.hidden))
                 }}>点我显示或隐藏底部菜单
-                </button>
+                </button>*/}
+                {this.props.children}
                 <FootBar/>
             </div>
         );

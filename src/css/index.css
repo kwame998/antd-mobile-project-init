@@ -1,11 +1,93 @@
+/*颜色*/
+.bg_ff6091{
+    background-color: #ff6091;
+}
+
+
+.mb_02{
+    margin-bottom: .2rem!important;
+}
+.mb_01{
+    margin-bottom: .1rem!important;
+}
+.mb_03{
+    margin-bottom: .3rem!important;
+}
+.pd_04{
+    padding: .4rem;
+}
 .text_center {
     text-align: center !important;
 }
-.mb15{
-    margin-bottom: 15px!important;
+.inline_block{
+    display: inline-block;
 }
-
-
-.am-tab-bar-bar{
+.fr{
+    float: right;
+}
+.position_ab{
+    position: absolute!important;
+}
+.position_re{
+    position: relative!important;
+}
+.position_fix{
+    position: fixed!important;
+}
+.top_0{
+    top:0;
+}
+.right_0{
+    right:0;
+}
+.left_0{
+    left:0;
+}
+.bottom_0{
+    bottom:0;
+}
+p{
+    margin: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+}
+.overflow_at{
+    overflow: auto;
+}
+.app .has_header {
+    top: 0.9rem;
+}
+.app .app_bar{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+}
+.app .app_content {
+    position: relative;
+    padding-bottom: 1rem;
+}
+/*.am-tab-bar-bar{
     padding-top: .25rem;
+}*/
+
+
+/*首页*/
+.index_card{
+    min-height: 5px;
+}
+/*个人中心*/
+.mine_card{
+    display: flex;
+    padding: .4rem;
+    color: #fff;
+}
+.radius-img{
+    border-radius: 50%;
+    height: 1rem;
+    margin-right: .2rem;
 }

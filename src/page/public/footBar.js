@@ -3,6 +3,7 @@
  */
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
+import {hashHistory} from 'react-router';
 import { TabBar } from 'antd-mobile';
 import {setFootBarSelect} from '../../redux/action';
 class FootBar extends Component{
@@ -22,7 +23,8 @@ class FootBar extends Component{
                     selectedIcon={{ uri: './img/index_select.svg' }}
                     selected={footBar.selectedTab === 'index'}
                     onPress={() => {
-                        dispatch(setFootBarSelect("index"))
+                        dispatch(setFootBarSelect("index"));
+                        hashHistory.push('index')
                     }}
                 >
 
@@ -34,7 +36,8 @@ class FootBar extends Component{
                     key="财政"
                     selected={footBar.selectedTab === 'finance'}
                     onPress={() => {
-                        dispatch(setFootBarSelect("finance"))
+                        dispatch(setFootBarSelect("finance"));
+                        hashHistory.push('finance')
                     }}
                 >
 
@@ -46,7 +49,8 @@ class FootBar extends Component{
                     key="报表"
                     selected={footBar.selectedTab === 'report'}
                     onPress={() => {
-                        dispatch(setFootBarSelect("report"))
+                        dispatch(setFootBarSelect("report"));
+                        hashHistory.push('report')
                     }}
                 >
                 </TabBar.Item>
@@ -57,7 +61,8 @@ class FootBar extends Component{
                     key="个人中心"
                     selected={footBar.selectedTab === 'mine'}
                     onPress={() => {
-                        dispatch(setFootBarSelect("mine"))
+                        dispatch(setFootBarSelect("mine"));
+                        hashHistory.push('mine')
                     }}
                 >
                 </TabBar.Item>

@@ -26,6 +26,7 @@
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.5.0",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-import": "^1.0.1",
@@ -44,6 +45,9 @@
     "json-server": "^0.8.20",
     "jsx-loader": "^0.13.2",
     "open-browser-webpack-plugin": "0.0.2",
+    "postcss-loader": "^0.13.0",
+    "postcss-pxtorem": "^3.3.1",
+    "precss": "^1.4.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",

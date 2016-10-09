@@ -1,5 +1,6 @@
 const path = require('path');
 const nodeModulesPath=path.resolve(__dirname, 'node_modules');
+const pxtorem = require('postcss-pxtorem');
 const webpack = require("webpack");
 const Visualizer = require('webpack-visualizer-plugin');
 const HtmlWepackPlugin = require("html-webpack-plugin");
@@ -9,14 +10,26 @@ module.exports = {
     cache: true,
     entry: {
         'main':[path.resolve(__dirname, 'src/main.js')],
-        'vendor':["react", "react-dom",'react-router','react-redux','jquery']
+        'vendor':["react", "react-dom",'react-router','react-redux','jquery','fecha']
     },
     output: {
         filename: "[name].js"
     },
+    postcss: function () {
+        return [
+            require('precss'),
+            require('autoprefixer'),
+            pxtorem({
+                rootValue: 100,
+                propWhiteList: [],
+            })
+        ];
+    },
     module: {
         loaders: [
-            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader") },
+            // { test: /\.css$/, loader: "style-loader!css-loader!postcss-loader" },
+
             {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader?prefix=font/[name].[ext]'
@@ -70,6 +83,6 @@ module.exports = {
                 collapseWhitespace: true   //删除空白符与换行符
             }
         }),
-        new ExtractTextPlugin("css/styles.css", {allChunks: true})
+        new ExtractTextPlugin("css/styles.css")
     ]
 };
