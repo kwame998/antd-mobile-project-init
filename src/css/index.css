@@ -1,0 +1,11 @@
+.text_center {
+    text-align: center !important;
+}
+.mb15{
+    margin-bottom: 15px!important;
+}
+
+
+.am-tab-bar-bar{
+    padding-top: .25rem;
+}
