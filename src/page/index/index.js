@@ -10,7 +10,7 @@ class Index extends Component{
     }
     render(){
         return(
-            <div className="overflow_at app_content has_header">
+            <div className="has_header">
                 我是首页
             </div>
         )

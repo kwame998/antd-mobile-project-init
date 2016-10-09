@@ -10,7 +10,7 @@ class Mine extends Component{
     }
     render(){
         return(
-            <div className="overflow_at app_content has_header">
+            <div className="has_header">
                 <div className="mine_card bg_ff6091 position_re">
                     <img src="https://zos.alipayobjects.com/rmsportal/XmwCzSeJiqpkuMB.png"
                          className="radius-img"/>
