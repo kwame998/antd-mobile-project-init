@@ -55,8 +55,18 @@ body {
 .overflow_at{
     overflow: auto;
 }
-.app .has_header {
+.app{
+    height: 100%;
+}
+.app_title{
+    color: rgb(64, 64, 64);
+    position: relative;
+    padding: 0.16rem 0.32rem;
+}
+.app .app_content .has_header {
     top: 0.9rem;
+    position: relative;
+    padding-bottom: 1rem;
 }
 .app .app_bar{
     position: fixed;
@@ -64,7 +74,6 @@ body {
     left: 0;
     z-index: 9;
     box-sizing: border-box;
-    padding: 5px;
     width: 100%;
 }
 .app .app_content {
@@ -78,13 +87,21 @@ body {
 
 /*首页*/
 .index_card{
-    min-height: 5px;
+    min-height: 3rem;
+    width: 100%;
+}
+.index_card img:first-child{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
 }
 /*个人中心*/
 .mine_card{
     display: flex;
     padding: .4rem;
     color: #fff;
+    min-height: 1rem;
 }
 .radius-img{
     border-radius: 50%;

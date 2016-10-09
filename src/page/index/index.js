@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import {connect} from "react-redux";
-import {List,InputItem,Icon,Button,WingBlank} from "antd-mobile"
+import {List} from "antd-mobile"
 import {setFootBarSelect,setNavBarTitle} from '../../redux/action';
 class Index extends Component{
     componentWillMount(){
@@ -11,7 +11,28 @@ class Index extends Component{
     render(){
         return(
             <div className="has_header">
-                我是首页
+               <div className="index_card">
+                   <img src="https://modao.cc/uploads2/images/485/4851839/raw_1471938610.png" alt="index"/>
+               </div>
+                <div>
+                    <p className="app_title">公司公告</p>
+                    <List>
+                        <List.Item
+                            thumb
+                            extra="2016-08-20"
+                            arrow="horizontal"
+                        >
+                            2017年预算通知
+                        </List.Item>
+                        <List.Item
+                            thumb
+                            extra="2016-08-15"
+                            arrow="horizontal"
+                        >
+                            2016年报销政策通知
+                        </List.Item>
+                    </List>
+                </div>
             </div>
         )
     }
