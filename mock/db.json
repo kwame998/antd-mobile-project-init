@@ -1,0 +1,12 @@
+{
+  "getShopSku": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "searchSkuInfo":[
+    { "id": 2, "title": "jsosdf", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
