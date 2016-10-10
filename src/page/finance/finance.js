@@ -11,9 +11,7 @@ class Finance extends Component{
     render(){
         return(
             <div className="has_header">
-                <div className="mine_card">
-                    财政页面
-                </div>
+                财政页面
 
             </div>
         )

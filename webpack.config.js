@@ -45,9 +45,9 @@ module.exports = {
                 query: {
                     cacheDirectory: true,
                     presets: ['react', 'es2015'],
-                    //支持es6 static
+                     //支持es6 static(使用按需引入插件,样式main.js引入，故这不自动引入css)
                     plugins: ["transform-class-properties",["import", {
-                        style: 'css',
+                        // style: 'css',
                         libraryName: 'antd-mobile',
                     }]],
                     env: {

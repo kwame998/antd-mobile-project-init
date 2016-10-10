@@ -11,10 +11,7 @@ class Report extends Component{
     render(){
         return(
             <div className="has_header">
-                <div className="mine_card">
-                    报表页面
-                </div>
-
+                报表页面
             </div>
         )
     }
