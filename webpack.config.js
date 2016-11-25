@@ -32,7 +32,7 @@ module.exports = {
 
             {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file-loader?prefix=font/[name].[ext]'
+                loader: 'file-loader?name=font/[name].[ext]'
             },
             {
                 test: /\.(png|jpg|jpeg|gif)$/,
