@@ -10,10 +10,10 @@ module.exports = {
     cache: true,
     entry: {
         'main':[path.resolve(__dirname, 'src/main.js')],
-        'vendor':["react", "react-dom",'react-router','react-redux','jquery','fecha']
+        'vendor':["react", "react-dom",'react-router','react-redux','jquery']
     },
     output: {
-        filename: "[name].js"
+       filename: "js/[name].[hash].js"
     },
     postcss: function () {
         return [
@@ -28,15 +28,13 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader") },
-            // { test: /\.css$/, loader: "style-loader!css-loader!postcss-loader" },
-
             {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file-loader?name=font/[name].[ext]'
+                loader: 'file-loader?name=font/[name].[hash].[ext]'
             },
             {
                 test: /\.(png|jpg|jpeg|gif)$/,
-                loader: 'url?limit=10000&name=img/[name].[ext]'
+                loader: 'url?limit=10000&name=img/[name].[hash].[ext]'
             },
             {
                 test: /\.jsx?$/,
@@ -45,9 +43,9 @@ module.exports = {
                 query: {
                     cacheDirectory: true,
                     presets: ['react', 'es2015'],
-                     //支持es6 static(使用按需引入插件,样式main.js引入，故这不自动引入css)
+                     //支持es6 static
                     plugins: ["transform-class-properties",["import", {
-                        // style: 'css',
+                        style: 'css',
                         libraryName: 'antd-mobile',
                     }]],
                     env: {
@@ -70,8 +68,7 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             jQuery: "jquery",
-            $: "jquery",
-            fecha:'fecha',
+            $: "jquery"
         }),
         new HtmlWepackPlugin({
             template: __dirname + '/templet.html',
@@ -83,6 +80,6 @@ module.exports = {
                 collapseWhitespace: true   //删除空白符与换行符
             }
         }),
-        new ExtractTextPlugin("css/styles.css")
+        new ExtractTextPlugin("css/styles.[contenthash].css")
     ]
 };

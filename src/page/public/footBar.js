@@ -19,8 +19,8 @@ class FootBar extends Component{
                 <TabBar.Item
                     title="首页"
                     key="首页"
-                    icon={{ uri: './img/index.svg' }}
-                    selectedIcon={{ uri: './img/index_select.svg' }}
+                    icon={{ uri: './lib/tabBarSvg/index.svg' }}
+                    selectedIcon={{ uri: './lib/tabBarSvg/index_select.svg' }}
                     selected={footBar.selectedTab === 'index'}
                     onPress={() => {
                         dispatch(setFootBarSelect("index"));
@@ -30,8 +30,8 @@ class FootBar extends Component{
 
                 </TabBar.Item>
                 <TabBar.Item
-                    icon={{ uri: './img/finance.svg' }}
-                    selectedIcon={{ uri: './img/finance_select.svg' }}
+                    icon={{ uri: './lib/tabBarSvg/finance.svg' }}
+                    selectedIcon={{ uri: './lib/tabBarSvg/finance_select.svg' }}
                     title="财政"
                     key="财政"
                     selected={footBar.selectedTab === 'finance'}
@@ -43,8 +43,8 @@ class FootBar extends Component{
 
                 </TabBar.Item>
                 <TabBar.Item
-                    icon={{ uri: './img/report.svg' }}
-                    selectedIcon={{ uri: './img/report_select.svg' }}
+                    icon={{ uri: './lib/tabBarSvg/report.svg' }}
+                    selectedIcon={{ uri: './lib/tabBarSvg/report_select.svg' }}
                     title="报表"
                     key="报表"
                     selected={footBar.selectedTab === 'report'}
@@ -55,8 +55,8 @@ class FootBar extends Component{
                 >
                 </TabBar.Item>
                 <TabBar.Item
-                    icon={{ uri: './img/mine.svg' }}
-                    selectedIcon={{ uri: './img/mine_select.svg' }}
+                    icon={{ uri: './lib/tabBarSvg/mine.svg' }}
+                    selectedIcon={{ uri: './lib/tabBarSvg/mine_select.svg' }}
                     title="个人中心"
                     key="个人中心"
                     selected={footBar.selectedTab === 'mine'}

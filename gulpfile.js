@@ -58,7 +58,7 @@ gulp.task("webpack:build", function (callback) {
             colors: true
         }));
         //复制文件夹
-        gulp.src(['src/css/*', 'src/img/*','src/font/*'], {base: './src'})
+        gulp.src(['src/lib/**'], {base: './src'})
             .pipe(gulp.dest('dist'))
     });
 });

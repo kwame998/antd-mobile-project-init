@@ -39,10 +39,6 @@ class LayOut extends Component {
         return (
             <div>
                 {this.renderNavBar()}
-               {/* <button onClick={()=> {
-                    this.props.dispatch(setFootBarVisible(!this.props.footBar.hidden))
-                }}>点我显示或隐藏底部菜单
-                </button>*/}
                 <div className="overflow_at app_content">
                     {this.props.children}
                 </div>
